@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>Диаграма на компонентите</title>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .main-system {
+            border: 3px solid #2c3e50;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #ecf0f1, #bdc3c7);
+            padding: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .system-title {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid #3498db;
+        }
+        
+        .components-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+        
+        .component {
+            flex: 1;
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .component:hover {
+            transform: translateY(-5px);
+        }
+        
+        .form-component {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            border: 2px solid #ff7979;
+        }
+        
+        .search-component {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            border: 2px solid #f1c40f;
+        }
+        
+        .table-component {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            border: 2px solid #2ecc71;
+        }
+        
+        .component h3 {
+            margin-top: 0;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        .component ul {
+            margin: 10px 0;
+            padding-left: 20px;
+            font-size: 12px;
+        }
+        
+        .component li {
+            margin: 5px 0;
+        }
+        
+        .logic-section {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            color: white;
+        }
+        
+        .logic-title {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .logic-components {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+        
+        .logic-component {
+            flex: 1;
+            background: rgba(255,255,255,0.2);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .crud-logic {
+            background: linear-gradient(135deg, #9b59b6, #8e44ad);
+        }
+        
+        .validation-logic {
+            background: linear-gradient(135deg, #e67e22, #d35400);
+        }
+        
+        .search-logic {
+            background: linear-gradient(135deg, #16a085, #1abc9c);
+        }
+        
+        .arrow {
+            text-align: center;
+            font-size: 24px;
+            color: #2c3e50;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-system">
+            <div class="system-title">🎓 СТУДЕНТСКИ МЕНИДЖЪР</div>
+            
+            <div class="components-row">
+                <div class="component form-component">
+                    <h3>📝 ФОРМА ЗА ВЪВЕЖДАНЕ</h3>
+                    <ul>
+                        <li>• Име на студент</li>
+                        <li>• ФН (10 цифри)</li>
+                        <li>• Оценка (2.00-6.00)</li>
+                        <li>• Валидация на данни</li>
+                        <li>• Бутон за запазване</li>
+                    </ul>
+                </div>
+                
+                <div class="component search-component">
+                    <h3>🔍 ТЪРСЕНЕ И СОРТИРАНЕ</h3>
+                    <ul>
+                        <li>• Търсене по име</li>
+                        <li>• Търсене по ФН</li>
+                        <li>• Сортиране по име</li>
+                        <li>• Сортиране по оценка</li>
+                        <li>• Сортиране по ФН</li>
+                    </ul>
+                </div>
+                
+                <div class="component table-component">
+                    <h3>📊 ТАБЛИЦА СЪС СТУДЕНТИ</h3>
+                    <ul>
+                        <li>• Име на студент</li>
+                        <li>• Факултетен номер</li>
+                        <li>• Оценка</li>
+                        <li>• Действия (Edit)</li>
+                        <li>• Действия (Delete)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="arrow">⬇️</div>
+            
+            <div class="logic-section">
+                <div class="logic-title">⚙️ JAVASCRIPT ЛОГИКА</div>
+                
+                <div class="logic-components">
+                    <div class="logic-component crud-logic">
+                        <h4>🔄 CRUD ОПЕРАЦИИ</h4>
+                        <ul>
+                            <li>• Create - Добавяне</li>
+                            <li>• Read - Четене</li>
+                            <li>• Update - Редактиране</li>
+                            <li>• Delete - Изтриване</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="logic-component validation-logic">
+                        <h4>✅ ВАЛИДАЦИЯ</h4>
+                        <ul>
+                            <li>• ФН = 10 цифри</li>
+                            <li>• Оценка = 2.00-6.00</li>
+                            <li>• Live валидация</li>
+                            <li>• Съобщения за грешки</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="logic-component search-logic">
+                        <h4>🎯 ТЪРСЕНЕ И СОРТИРАНЕ</h4>
+                        <ul>
+                            <li>• Филтриране на данни</li>
+                            <li>• Сортиране по критерии</li>
+                            <li>• localeCompare за български</li>
+                            <li>• Реално време</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
